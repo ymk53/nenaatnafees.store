@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zeenat Nafees Products</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff0f5;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    nav {
+      background-color: #c2185b;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      text-align: center;
+      background-color: #f8c6d8;
+      padding: 30px 20px;
+      border-bottom: 2px solid #880e4f;
+    }
+
+    header h1 {
+      color: #880e4f;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 18px;
+      color: #555;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #880e4f;
+      margin-top: 40px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .product {
+      background: #fce4ec;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .product img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .product h3 {
+      margin: 10px 0 5px;
+      color: #c2185b;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #444;
+    }
+
+    .buy-btn {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: #c2185b;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    form {
+      background: #fff8fa;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .qr-images {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .qr-images img {
+      width: 150px;
+      border: 2px solid #c2185b;
+      border-radius: 10px;
+      margin: 10px;
+    }
+
+    button {
+      background-color: #c2185b;
+      color: white;
+      padding: 12px 20px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #ad1457;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="booking.html">Booking</a>
+ 
+  </nav>
+
+  <!-- Welcome Section -->
+  <header>
+    <h1>Welcome to Zeenat Nafees Store</h1>
+    <p>Explore our skincare essentials and book your orders easily</p>
+  </header>
+
+  <div class="container">
+
+    <!-- Serums -->
+    <h2>Serums</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="v c.png" alt="Vitamin C Serum">
+        <h3>Vitamin C Serum</h3>
+        <p class="price">₹499</p>
+        <button class="buy-btn" onclick="selectProduct('Vitamin C Serum - ₹499')">Buy Now</button>
+      </div>
+      <div class="product">
+        <img src="anti-removebg-preview.png" alt="Anti Acne Serum">
+        <h3>Anti Acne Serum</h3>
+        <p class="price">₹450</p>
+        <button class="buy-btn" onclick="selectProduct('Anti Acne Serum - ₹450')">Buy Now</button>
+      </div>
+      <div class="product">
+        <img src="skin8.jpg" alt="Whitening Serum">
+        <h3>Whitening Serum</h3>
+        <p class="price">₹480</p>
+        <button class="buy-btn" onclick="selectProduct('Whitening Serum - ₹480')">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Facewash -->
+    <h2>Facewash</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="skin4.jpg" alt="Acne Facewash">
+        <h3>Acne Facewash</h3>
+        <p class="price">₹399</p>
+        <button class="buy-btn" onclick="selectProduct('Acne Facewash - ₹399')">Buy Now</button>
+      </div>
+      <div class="product">
+        <img src="oy.png" alt="Oily Skin Facewash">
+        <h3>Oily Skin Facewash</h3>
+        <p class="price">₹350</p>
+        <button class="buy-btn" onclick="selectProduct('Oily Skin Facewash - ₹350')">Buy Now</button>
+      </div>
+      <div class="product">
+        <img src="britenest-removebg-preview.png" alt="Brightening Facewash">
+        <h3>Brightening Facewash</h3>
+        <p class="price">₹420</p>
+        <button class="buy-btn" onclick="selectProduct('Brightening Facewash - ₹420')">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Order Form -->
+    <h2>Order Form</h2>
+    <form id="orderForm" onsubmit="sendOrder(event)">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="address">Address</label>
+      <textarea id="address" name="address" rows="3" required></textarea>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="product">Selected Product</label>
+      <input type="text" id="product" name="product" readonly required>
+
+      <label for="payment">Payment Method</label>
+      <select id="payment" name="payment" required>
+        <option value="">--Select--</option>
+        <option>PhonePe</option>
+        <option>Google Pay</option>
+        <option>Paytm</option>
+      </select>
+
+      <label for="screenshot">Upload Payment Screenshot (to send manually via WhatsApp)</label>
+      <input type="file" id="screenshot" accept="image/*" required>
+
+      <div class="qr-images">
+        
+        <img src="qr.jpg" alt="Google Pay QR">
+      </div>
+
+      <button type="submit">Submit Order via WhatsApp</button>
+    </form>
+
+    <!-- Return Section -->
+    <h2>Return Product</h2>
+    <form id="returnForm" onsubmit="sendReturn(event)">
+      <label for="rname">Name</label>
+      <input type="text" id="rname" name="rname" required>
+
+      <label for="rproduct">Product to Return</label>
+      <input type="text" id="rproduct" name="rproduct" required>
+
+      <label for="reason">Reason for Return</label>
+      <textarea id="reason" name="reason" rows="3" required></textarea>
+
+      <label for="remail">Email</label>
+      <input type="email" id="remail" name="remail" required>
+
+      <label for="rproof">Upload Payment Proof (send manually)</label>
+      <input type="file" id="rproof" accept="image/*" required>
+
+      <button type="submit">Submit Return via WhatsApp</button>
+    </form>
+  </div>
+
+<script>
+  function selectProduct(productName) {
+    document.getElementById("product").value = productName;
+    window.scrollTo({ top: document.getElementById("orderForm").offsetTop - 50, behavior: 'smooth' });
+  }
+
+ function sendOrder(e) {
+  e.preventDefault();
+  const form = document.getElementById("orderForm");
+  const name = form.name.value;
+  const address = form.address.value;
+  const email = form.email.value;
+  const product = form.product.value;
+  const payment = form.payment.value;
+
+  const msg = Order Details:%0AName: ${name}%0AAddress: ${address}%0AEmail: ${email}%0AProduct: ${product}%0APayment: ${payment}%0A(Send screenshot manually);
+  const url = https://wa.me/919522603952?text=${msg};
+  window.open(url, '_blank');
+
+  alert("Order submitted successfully!");
+  form.reset();
+}
+
+function sendReturn(e) {
+  e.preventDefault();
+  const form = e.target;
+  const name = form.rname.value;
+  const product = form.rproduct.value;
+  const reason = form.reason.value;
+  const email = form.remail.value;
+
+  const msg = Return Request:%0AName: ${name}%0AProduct: ${product}%0AReason: ${reason}%0AEmail: ${email}%0A(Send payment proof manually);
+  const url = https://wa.me/919522603952?text=${msg};
+  window.open(url, '_blank');
+
+  alert("Return request submitted!");
+  form.reset();
+}
+  
+</script>
+
+</body>
+</html>

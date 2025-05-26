@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zeenat Nafees Store - Booking</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://via.placeholder.com/1600x900?text=Parlor+Booking+Background') no-repeat center center/cover;
+      margin: 0;
+      color: #fff;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: #f8c6d8;
+    }
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.6);
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    h2, h3 {
+      text-align: center;
+      color: #f8c6d8;
+    }
+
+    .price-list {
+      display: grid;
+      gap: 10px;
+      margin: 20px 0 30px;
+    }
+
+    .price-card {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid #f8c6d8;
+      padding: 10px 15px;
+      border-radius: 8px;
+      color: #ffe8f0;
+      display: flex;
+      justify-content: space-between;
+      font-size: 1rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, select {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 5px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #f8c6d8;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #ffb6c1;
+    }
+
+    .back {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .back a {
+      color: #f8c6d8;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #ccc;
+      padding: 15px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Zeenat Nafees Store - Booking</h1>
+  </header>
+
+  <div class="container">
+    <h2>Book Your Makeup Appointment</h2>
+
+    <h3>Price List</h3>
+    <div class="price-list">
+      <div class="price-card"><span>Simple Makeup</span><span>₹1000 - ₹1500</span></div>
+      <div class="price-card"><span>Bridal Setal Makeup</span><span>₹4000</span></div>
+      <div class="price-card"><span>3D Makeup</span><span>₹5000</span></div>
+      <div class="price-card"><span>HD Makeup</span><span>₹7000</span></div>
+      <div class="price-card"><span>Air Brush Makeup</span><span>₹8500</span></div>
+    </div>
+
+    <form id="bookingForm">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}">
+
+      <label for="email">Email (optional)</label>
+      <input type="email" id="email" name="email">
+
+      <label for="date">Select Date</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="makeup">Select Makeup Type</label>
+      <select id="makeup" name="makeup" required>
+        <option value="">-- Select Makeup Type --</option>
+        <option value="Simple Makeup – ₹1000 - ₹1500">Simple Makeup – ₹1000 - ₹1500</option>
+        <option value="Bridal Setal Makeup – ₹4000">Bridal Setal Makeup – ₹4000</option>
+        <option value="3D Makeup – ₹5000">3D Makeup – ₹5000</option>
+        <option value="HD Makeup – ₹7000">HD Makeup – ₹7000</option>
+        <option value="Air Brush Makeup – ₹8500">Air Brush Makeup – ₹8500</option>
+      </select>
+
+      <button type="submit">Book via WhatsApp</button>
+    </form>
+
+    <div class="back">
+      <a href="home2.html">← Back to Home</a>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Zeenat Nafees Store. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const email = document.getElementById('email').value;
+      const date = document.getElementById('date').value;
+      const makeup = document.getElementById('makeup').value;
+
+      const message = Hello, I would like to book an appointment:\n\nName: ${name}\nPhone: ${phone}\nEmail: ${email}\nDate: ${date}\nSelected Makeup: ${makeup};
+      const whatsappNumber = "919522603952";
+      const url = https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)};
+
+      window.open(url, '_blank');
+    });
+  </script>
+</body>
+</html>
